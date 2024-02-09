@@ -154,9 +154,9 @@
             <div class="form__main">
                 <h3>Let's Talk</h3>
                 <form class="contact__form" id="contact__form" onsubmit="handleContactForm(event)">
-                    <input required type="text" name="fullName" id="fullName" aria-label="Full Name" placeholder="Full Name">
+                    <input required type="text" name="name" id="fullName" aria-label="Full Name" placeholder="Full Name">
                     <input required type="email" name="email" id="email" aria-label="Email" placeholder="Email">
-                    <input required type="text" name="phoneNumber" id="phoneNumber" aria-label="Phone Number" placeholder="Phone Number">
+                    <input required type="text" name="phone" id="phoneNumber" aria-label="Phone Number" placeholder="Phone Number">
                     <input required type="text" name="description" id="description" aria-label="Description" placeholder="Description">
                     <p class="submit__msg"></p>
                     <button type="submit">Submit</button>
@@ -173,6 +173,7 @@
     <script src="index.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Scripts -->
     

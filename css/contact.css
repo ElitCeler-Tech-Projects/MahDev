@@ -32,7 +32,7 @@
   width: 700px;
   height: 95vh;
   gap: 1.2rem;
-  background-color: #001336;
+  background-color: #000000;
   border-radius: 4px;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -166,18 +166,6 @@
   align-items: flex-start;
 }
 
-.contact__form > p:nth-child(1 of p) {
-  font-size: 1rem;
-  color: #f4f4f4;
-  text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.3rem;
-}
 
 @media all and (width <= 1024px) {
   .contact__box {
@@ -226,6 +214,20 @@
 .contact__form > button:focus-visible {
   background-color: #fff;
   color: #232323;
+}
+
+.submit__msg {
+  text-align: left;
+  font-size: 1rem;
+  color: #FFF;
+}
+
+.submit__msg-success {
+  color: green;
+}
+
+.submit__msg-failed {
+  color: red;
 }
 
 @media all and (width <= 600px) {

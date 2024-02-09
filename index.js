@@ -85,6 +85,38 @@ function toggleMyPopup() {
     contactPopup.classList.toggle('show__popup');
 }
 
+// EmailJS Setup
+
+const EMAILJS_SERVICE = 'service_ugbi33j';
+const EMAILJS_TEMPLATE = 'template_hce746l';
+const EMAILJS_ACCOUNT = 'Qv2px0HQRJ6yBcNmH';
+
+emailjs.init(EMAILJS_ACCOUNT);
+
+const contactForm = document.querySelector('#contact__form');
+const submitMsg = document.querySelector('.submit__msg');
+
 function handleContactForm(e) {
+
     e.preventDefault();
+    emailjs.sendForm(EMAILJS_SERVICE, EMAILJS_TEMPLATE, contactForm).then((res) => {
+        console.log(res);
+        contactFormSubmitResponse = 'We got you! Will reach you ASAP.';
+        submitMsg.classList.add('submit__msg-success');
+        submitMsg.textContent = contactFormSubmitResponse;
+    }).catch(() => {
+        console.log('Not Done');
+        contactFormSubmitResponse = 'Failed! Try again';
+        submitMsg.classList.add('submit__msg-failed');
+        submitMsg.textContent = contactFormSubmitResponse;
+    })
+
+    
+    setTimeout(() => {
+        e.target.reset();
+        submitMsg.textContent = '';
+        contactPopup.classList.remove('show__popup');
+    }, 8000);
 }
+
+// EmailJS Setup
