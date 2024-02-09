@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MahDev | Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advancing global progress with innovative technologies and a personal touch.">
+</head>
+<body>
+
+    <main class="app__main">
+
+        <nav class="app__nav">
+            <a href="index.html" title="Home"><ion-icon name="home"></ion-icon><span>Home</span></a>
+            <a href="#services" title="Services"><ion-icon name="apps"></ion-icon><span>Services</span></a>
+            <a href="#company" title="Company"><ion-icon name="storefront"></ion-icon><span>Company</span></a>
+            <a href="#contact" title="Contact"><ion-icon name="call"></ion-icon><span>Contact</span></a>
+        </nav>
+
+        <!-- Section Landing -->
+        
+        <section class="app__landing">
+            <img src="/assets/MahDev.svg" alt="MahDev">
+            <p><q>Advancing global progress with innovative technologies and a personal touch.</q></p>            
+        </section>
+
+        <!-- Section Landing -->
+
+        <video src="/assets/BGVideo.mp4" id="backgroundVideo" autoplay loop muted></video>
+
+        
+    </main>
+
+    <!-- Section 2 - Who We Are ? -->
+
+    <section class="app__section1" id="company">
+        
+        <img src="/assets/WhoWeAre.svg" alt="Who We Are">
+
+        <div class="section1__content">
+            <h2>Who We Are?</h2>
+            <p>Mahdev is a Cyborg Company delivering effective solutions for a variety of requirements. As a custom-tailored firm, we specialize in realizing the potential of any Brand. We provide design and development services, along with in-house products as SaaS. Reach out to us today! Our purpose is to partner with you to transform your ideas into successful narratives.  Our method is thoughtful and strategic, recognizing the profound influence of communication strategy on business.</p>
+        </div>
+
+    </section>
+
+    <!-- Section 2 - Who We Are ? -->
+
+    <!-- Section 3 - Mission & Vision -->
+
+    <section class="app__section2">
+
+        <div class="section2__center">
+            
+            <div class="section2__content">
+                <h2>Mission & Vision</h2>
+                <div>
+                    <h4>Our Mission</h4>
+                    <p>To be an unwavering partner, challenging the status quo, and enabling our clients to achieve remarkable feats.</p>
+                </div>
+                <div>
+                    <h4>Our Vision</h4>
+                    <p>Advancing global progress with innovative technologies and a personal touch.</p>
+                </div>
+            </div>
+            
+            <img src="/assets/Mission.svg" alt="Mission">
+            
+            <video src="/assets/BGVideo.mp4" id="backgroundVideo" autoplay loop muted></video>
+            
+        </div>
+
+    </section>
+
+    <!-- Section 3 - Mission & Vision -->
+
+    <!-- Services -->
+
+    <section class="app__services" id="services">
+        <h2>Our Services</h2>
+        <div class="all__services"></div>
+    </section>
+
+    <!-- Services -->
+
+    <!-- Map -->
+
+    <section class="app__map">
+        <img src="/assets/BusinessAchievement.svg" alt="Business Acheivement">
+        <video src="/assets/BGVideo.mp4" id="backgroundVideo" autoplay loop muted></video>
+    </section>
+
+    <!-- Map -->
+
+    <!-- Contact Us -->
+
+    <section class="app__contact" id="contact">
+        <div class="contact__center">
+            <img src="/assets/ContactUs.svg" alt="Contact Us">
+            <div class="contact__content">
+                <h3>An enlightened today and a brighter tomorrow start with a steadfast companion</h3>
+                <p>In a swiftly evolving world, your business requires more than a mere collaborator for digital transition. You need a champion. An entity that supports you and foresees the path forward. Someone who not only enhances business results but also simplifies the process of conducting business.</p>
+                <button type="button" onclick="toggleMyPopup()" title="Connect With Us" title="Connect With Us">Connect With Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+
+    <!-- Footer -->
+
+    <footer class="app__footer">
+
+        <section class="footer__center">
+
+            <div class="footer__1">
+                <img src="/assets/MahDev.svg" alt="MahDev">
+                <p>An unwavering partner. Challenging the conventional norms. Enabling clients, partners, collaborators, and associates to achieve greater results consistently.</p>
+            </div>
+
+            <div class="footer__2">
+                <p>Sitemap</p>
+                <a href="#" title="Go to Top">Go To Top</a>
+                <a href="#services" title="Services">Services</a>
+                <a href="#company" title="Company">Company</a>
+                <a href="#contact" title="Contact">Contact</a>
+            </div>
+
+            <div class="footer__3">
+                <p>Connect With Us</p>
+                <a href="tel: 999999999" title="Call"><ion-icon name="call"></ion-icon><span>9999999999</span></a>
+                <a href="mailto: info@mahdev.com" title="Mail"><ion-icon name="mail"></ion-icon><span>info@mail.com</span></a>
+                <a href="#" rel="noopener noreferrer" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon><span>LinkedIn</span></a>
+                <a href="#" rel="noopener noreferrer" title="Twitter"><ion-icon name="logo-twitter"></ion-icon><span>X (Formerly Twitter)</span></a>
+            </div>
+
+        </section>
+
+        <video src="/assets/BGVideo.mp4" id="backgroundVideo" autoplay loop muted></video>
+
+    </footer>
+
+    <!-- Footer -->
+
+    <!-- Contact Popup -->
+
+    <div class="contact__popup">
+        <div class="contact__box">
+            <div class="contact__logo">
+                <img src="/assets/MahDev.svg" alt="MahDev">
+            </div>
+            <div class="form__main">
+                <h3>Let's Talk</h3>
+                <form class="contact__form" id="contact__form" onsubmit="handleContactForm(event)">
+                    <input required type="text" name="fullName" id="fullName" aria-label="Full Name" placeholder="Full Name">
+                    <input required type="email" name="email" id="email" aria-label="Email" placeholder="Email">
+                    <input required type="text" name="phoneNumber" id="phoneNumber" aria-label="Phone Number" placeholder="Phone Number">
+                    <input required type="text" name="description" id="description" aria-label="Description" placeholder="Description">
+                    <p class="submit__msg"></p>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <button type="button" onclick="toggleMyPopup()" title="close" aria-label="Close"><ion-icon name="close"></ion-icon></button>
+        </div>
+    </div>
+
+    <!-- Contact Popup -->
+
+    <!-- Scripts -->
+
+    <script src="index.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!-- Scripts -->
+    
+</body>
+</html>

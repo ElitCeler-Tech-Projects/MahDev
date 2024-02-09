@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact__popup {
+  display: none;
+}
+
+.contact__popup.show__popup {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #00000095;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.contact__box {
+  width: 700px;
+  height: 95vh;
+  gap: 1.2rem;
+  background-color: #001336;
+  border-radius: 4px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 2rem;
+  max-width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-shadow: 0 0 16px 1px #23232390;
+  box-shadow: 0 0 16px 1px #23232390;
+  overflow-y: scroll;
+}
+
+.contact__box > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 36px;
+  margin-right: 24px;
+  padding: 0.1rem;
+  width: 32px;
+  height: 32px;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  color: #fff;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.contact__box::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.contact__box > button {
+  color: #ddd;
+  border-color: #ddd;
+}
+
+.contact__logo {
+  width: 100%;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(-16px);
+  -ms-transform: translateY(-16px);
+  transform: translateY(-16px);
+}
+
+.contact__logo img {
+  width: 92px;
+  height: auto;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.form__main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.2rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.form__main > h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.form__main > p {
+  color: #FFF;
+  font-size: 1rem;
+}
+
+.contact__form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.2rem;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.contact__form > p:nth-child(1 of p) {
+  font-size: 1rem;
+  color: #f4f4f4;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+@media all and (width <= 1024px) {
+  .contact__box {
+    width: 620px;
+    height: 100vh;
+    gap: 1.2rem;
+    background-color: #000;
+    border-radius: 4px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+}
+
+.contact__form > input {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  color: #fff;
+  resize: none;
+  font-size: 1rem;
+}
+
+.contact__form > input:focus-visible {
+  border-bottom: 1.6px solid #fff;
+}
+
+.contact__form > button {
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  border: 1.6px solid #fff;
+  border-radius: 24px;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact__form > button:hover,
+.contact__form > button:focus-visible {
+  background-color: #fff;
+  color: #232323;
+}
+
+@media all and (width <= 600px) {
+  .contact__box {
+    padding: 1rem;
+  }
+
+  .contact__box > button {
+    margin-top: 12px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+
+  .contact__box > h3 {
+    font-size: 1.4rem;
+  }
+}
