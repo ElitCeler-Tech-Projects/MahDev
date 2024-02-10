@@ -1,11 +1,3 @@
-const appNavMenu = document.querySelector('.app__nav');
-const menuButton = document.querySelector('.smallScreenMenu');
-
-function toggleMenuBar() {
-    menuButton.classList.toggle('active__menu');
-    appNavMenu.classList.toggle('active__menu');
-}
-
 const allServicesBox = document.querySelector('.all__services');
 
 const services = [
@@ -120,3 +112,15 @@ function handleContactForm(e) {
 }
 
 // EmailJS Setup
+
+// Menu Bar
+
+const menuBarButton = document.querySelector('.app__header button');
+const menu = document.querySelector('.app__nav');
+
+const toggleMenuBar = () => {
+    menu.classList.toggle('active__menu');
+    menuBarButton.classList.toggle('active__menu');
+}
+
+// Menu Bar

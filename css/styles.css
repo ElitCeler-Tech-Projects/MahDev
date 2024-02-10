@@ -35,24 +35,29 @@ body {
   position: relative;
 }
 
-.app__nav {
+.app__header {
   width: 100%;
-  height: 72px;
+  height: 80px;
   background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  justify-content: space-between;
   align-items: center;
   gap: 2.4rem;
+  padding: 0 2rem 0 1rem;
+}
+
+.app__header img {
+  width: 144px;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.app__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
 }
 
 .app__nav a {
@@ -95,6 +100,10 @@ body {
   -webkit-transition: width 0.3s ease;
   -o-transition: width 0.3s ease;
   transition: width 0.3s ease;
+}
+
+.app__header button {
+  display: none;
 }
 
 .app__landing {
@@ -716,6 +725,63 @@ video {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .app__header {
+    position: relative;
+  }
+
+  .app__nav {
+    position: absolute;
+    width: 180px;
+    height: 0;
+    overflow-y: hidden;
+    background-color: #FFF;
+    border-radius: 8px;
+    top: 82px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in;
+  }
+
+  .app__nav::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+  .app__nav.active__menu {
+    height: 220px;
+    overflow-y: auto;
+    box-shadow:  0 0 12px 2px #FFFFFF90;
+  }
+
+  .app__nav a {
+    color: var(--c-primary);
+  }
+
+  .app__nav a::after {
+    background-color: var(--c-primary);
+  }
+
+  .app__header button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #FFF;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: transform 0.3s ease-in;
+  }
+  
+  .app__header button.active__menu {
+    transform: rotate(-90deg);
+  }
+
   .app__main {
     height: 100%;
     min-height: 60vh;
