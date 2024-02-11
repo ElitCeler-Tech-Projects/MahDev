@@ -528,7 +528,7 @@ video {
     background-color: #333333;
     color: var(--c-mainBg);
     font-family: inherit;
-    border-radius: 28px;
+    border-radius: 8px;
     border: 2px solid transparent;
     font-size: 1rem;
     cursor: pointer;
@@ -547,7 +547,26 @@ video {
   width: 100%;
   height: 100%;
   position: relative;
-  padding: 1.8rem 0.8rem;
+  padding: 1.8rem 0.8rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+  flex-direction: column;
+}
+
+.copyright {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.copyright > p {
+  color: var(--c-mainBg);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: right;
 }
 
 .footer__center {
