@@ -548,6 +548,7 @@ video {
   height: 100%;
   position: relative;
   padding: 1.8rem 0.8rem;
+  background-color: var(--c-primary);
 }
 
 .footer__center {
@@ -653,6 +654,13 @@ video {
   gap: 0.3rem;
   outline: none;
   position: relative;
+}
+
+.footer__3 img {
+  width: 19px;
+  aspect-ratio: 1;
+  color: #FFF;
+  height: auto;
 }
 
 .footer__2 a::after,
