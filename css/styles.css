@@ -7,6 +7,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
 }
 
 :root {
@@ -37,17 +41,17 @@ body {
 
 .app__header {
   width: 100%;
-  height: 80px;
+  height: 82px;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2.4rem;
-  padding: 0 2rem 0 1rem;
+  padding: 0 2rem ;
 }
 
 .app__header img {
-  width: 144px;
+  width: 72px;
   height: auto;
   aspect-ratio: 3/2;
   object-fit: cover;
@@ -57,7 +61,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.6rem;
 }
 
 .app__nav a {
@@ -388,6 +392,7 @@ video {
 
 .service__content {
   width: 100%;
+  height: 264px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,7 +404,7 @@ video {
   -ms-flex-align: start;
   align-items: flex-start;
   gap: 0.6rem;
-  background-color: var(--c-secondary);
+  background-color: #333333;
   border-radius: 8px;
   padding: 1rem 0.8rem;
 }
@@ -693,17 +698,13 @@ video {
       width: 100%;
     }
   }
+
+  .service__content {
+    height: 100%;
+  }
 }
 
-@media only screen and (max-width: 900px) {
-  .app__section1,
-  .section2__center {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-  }
-
+@media only screen and (max-width: 980px) {
   .footer__center {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -724,6 +725,16 @@ video {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .app__section1,
+  .section2__center {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
 @media only screen and (max-width: 768px) {
 
   .app__header {
@@ -732,15 +743,17 @@ video {
 
   .app__nav {
     position: absolute;
-    width: 180px;
+    width: 200px;
     height: 0;
     overflow-y: hidden;
     background-color: #FFF;
     border-radius: 8px;
     top: 82px;
     right: 24px;
+    gap: 1.2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     transition: all 0.3s ease-in;
   }
 
@@ -799,9 +812,12 @@ video {
 }
 
 @media only screen and (max-width: 564px) {
+
+  .app__header {
+    padding: 0 1rem;
+  }
+
   .app__nav {
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
     gap: 1.2rem;
   }
 
