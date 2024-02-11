@@ -525,7 +525,7 @@ video {
 
   & button {
     padding: 0.8rem 1.2rem;
-    background-color: var(--c-secondary);
+    background-color: #333333;
     color: var(--c-mainBg);
     font-family: inherit;
     border-radius: 28px;
@@ -548,7 +548,6 @@ video {
   height: 100%;
   position: relative;
   padding: 1.8rem 0.8rem;
-  background-color: var(--c-primary);
 }
 
 .footer__center {
@@ -689,8 +688,8 @@ video {
   }
 
   .contact__content button:is(:hover, :focus-visible) {
-    border-color: var(--c-secondary);
-    color: var(--c-secondary);
+    border-color: #333333;
+    color: #333333;
     background-color: transparent;
   }
 }
